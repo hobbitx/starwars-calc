@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/starwars-calc/static/css/main.e3bb008a.chunk.css",
-    "main.js": "/starwars-calc/static/js/main.4cd4db39.chunk.js",
-    "main.js.map": "/starwars-calc/static/js/main.4cd4db39.chunk.js.map",
+    "main.css": "/starwars-calc/static/css/main.206521b9.chunk.css",
+    "main.js": "/starwars-calc/static/js/main.2b953734.chunk.js",
+    "main.js.map": "/starwars-calc/static/js/main.2b953734.chunk.js.map",
     "runtime-main.js": "/starwars-calc/static/js/runtime-main.7a9e242b.js",
     "runtime-main.js.map": "/starwars-calc/static/js/runtime-main.7a9e242b.js.map",
     "static/js/2.c8e0f342.chunk.js": "/starwars-calc/static/js/2.c8e0f342.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.43336c94.chunk.js": "/starwars-calc/static/js/3.43336c94.chunk.js",
     "static/js/3.43336c94.chunk.js.map": "/starwars-calc/static/js/3.43336c94.chunk.js.map",
     "index.html": "/starwars-calc/index.html",
-    "static/css/main.e3bb008a.chunk.css.map": "/starwars-calc/static/css/main.e3bb008a.chunk.css.map",
+    "static/css/main.206521b9.chunk.css.map": "/starwars-calc/static/css/main.206521b9.chunk.css.map",
     "static/js/2.c8e0f342.chunk.js.LICENSE.txt": "/starwars-calc/static/js/2.c8e0f342.chunk.js.LICENSE.txt",
     "static/media/cargo.4f78aa6d.png": "/starwars-calc/static/media/cargo.4f78aa6d.png",
     "static/media/naboo.a4c4c65b.png": "/starwars-calc/static/media/naboo.a4c4c65b.png",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.7a9e242b.js",
     "static/js/2.c8e0f342.chunk.js",
-    "static/css/main.e3bb008a.chunk.css",
-    "static/js/main.4cd4db39.chunk.js"
+    "static/css/main.206521b9.chunk.css",
+    "static/js/main.2b953734.chunk.js"
   ]
 }
