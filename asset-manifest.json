@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/starwars-calc/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/starwars-calc/static/js/main.3f1dbf63.chunk.js",
+    "main.js.map": "/starwars-calc/static/js/main.3f1dbf63.chunk.js.map",
+    "runtime-main.js": "/starwars-calc/static/js/runtime-main.75a0cf76.js",
+    "runtime-main.js.map": "/starwars-calc/static/js/runtime-main.75a0cf76.js.map",
+    "static/js/2.f783d7e1.chunk.js": "/starwars-calc/static/js/2.f783d7e1.chunk.js",
+    "static/js/2.f783d7e1.chunk.js.map": "/starwars-calc/static/js/2.f783d7e1.chunk.js.map",
+    "static/js/3.59591a8c.chunk.js": "/starwars-calc/static/js/3.59591a8c.chunk.js",
+    "static/js/3.59591a8c.chunk.js.map": "/starwars-calc/static/js/3.59591a8c.chunk.js.map",
+    "index.html": "/starwars-calc/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/starwars-calc/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.f783d7e1.chunk.js.LICENSE.txt": "/starwars-calc/static/js/2.f783d7e1.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/starwars-calc/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.75a0cf76.js",
+    "static/js/2.f783d7e1.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.3f1dbf63.chunk.js"
+  ]
+}
