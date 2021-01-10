@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./StarShiptContent.css";
+import "./css/StarShiptContent.css";
 import { Image } from "semantic-ui-react";
 import crew from "./images/crew.png";
 import people from "./images/people.png";

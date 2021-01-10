@@ -1,7 +1,7 @@
 import * as React from "react";
 import ListItem from "./ListItem";
 import { List } from 'semantic-ui-react';
-import './ListShips.css';
+import './css/ListShips.css';
 
 class ListShips extends React.Component {
   constructor() {

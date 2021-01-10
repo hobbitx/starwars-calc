@@ -1,6 +1,6 @@
 import * as React from "react";
 import StarShiptContent from "./StarShiptContent";
-import "./ListItem.css";
+import "./css/ListItem.css";
 import { List, Image } from "semantic-ui-react";
 import Collapse from '@material-ui/core/Collapse';
 import Affiliation from "../logic/Affiliation";
