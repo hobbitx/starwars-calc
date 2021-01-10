@@ -8,9 +8,6 @@ import stop from "./images/stops.png";
 import speed from "./images/speed.png";
 
 class StarShiptContent extends React.Component {
-  constructor() {
-    super();
-  }
   render() {
     console.log(this.props.starShip);
     return (

@@ -5,8 +5,10 @@ import Loading from "./Loading";
 import ListShips from "./ListShips";
 import Error from "./Error";
 import { toast, ToastContainer } from "react-toastify";
+import Switch from '@material-ui/core/Switch';
 import "react-toastify/dist/ReactToastify.min.css";
-import "./css/Main.css"
+import "./css/Main.css";
+import Grid from '@material-ui/core/Grid';
 
 const options = {
   autoClose: 6000,
@@ -15,11 +17,17 @@ const options = {
   hideProgressBar: true,
 };
 
-const myStyle = {
+const middle = {
   position: "fixed",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
+};
+const top = {
+  position: "fixed",
+  top: "0%",
+  color: "white",
+  left: "1%",
 };
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -32,19 +40,18 @@ class Main extends React.Component {
       starShips: [],
       value: null,
       error: false,
+      backup: false,
       loading: true,
       loadingScreen: "none",
     };
 
+    this.setBackup = this.setBackup.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
   Calculate = async () => {
     if (isNaN(this.state.value)) {
-      toast.error(
-        "Enter a distance in MegaLights (numbers only)",
-        options
-      );
+      toast.error("Enter a distance in MegaLights (numbers only)", options);
     } else {
       this.setState({
         loadingScreen: "block",
@@ -54,8 +61,8 @@ class Main extends React.Component {
     }
   };
   LoadStartShips = async () => {
-    let starShipsAll = await starShipControl();
-    if (starShipsAll == "error") {
+    let starShipsAll = await starShipControl(this.state.backup);
+    if (starShipsAll === "error") {
       this.setState({
         error: true,
       });
@@ -68,12 +75,16 @@ class Main extends React.Component {
       });
     }
   };
-
+  setBackup() {
+    let newBackup = !this.state.backup
+    this.setState({
+      backup: newBackup,
+    });
+  }
   handleChange(event) {
     this.setState({ value: event.target.value });
   }
   render() {
-    console.log(this.state.loading);
     if (this.state.error) {
       return (
         <React.Fragment>
@@ -81,10 +92,25 @@ class Main extends React.Component {
         </React.Fragment>
       );
     } else if (this.state.loading) {
-      if (this.state.loadingScreen == "none") {
+      if (this.state.loadingScreen === "none") {
         return (
           <React.Fragment>
-            <div class="ui action input" style={myStyle}>
+            <div style={top}>
+              Use backup:
+              <Grid component="label" container alignItems="center" spacing={1}>
+              <Grid item>Off</Grid>
+              <Grid item>
+              <Switch
+                size="small"
+                color="default"
+                checked={this.state.backup}
+                onChange={this.setBackup}
+              />
+              </Grid>
+              <Grid item>On</Grid>
+            </Grid>
+            </div>
+            <div class="ui action input" style={middle}>
               <input
                 type="text"
                 class="inputMglt"

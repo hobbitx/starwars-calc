@@ -1,8 +1,10 @@
-export default async function starShipControl() {
+import Backup from "./StartShips_backup";
+
+export default async function starShipControl(backup) {
   let myRequest = new Request("https://swapi.dev/api/starships/");
   let starShips = [];
   let next = "";
-    await fetch(myRequest)
+  await fetch(myRequest)
     .then((response) => {
       if (response.status === 200) {
         return response.json();
@@ -16,7 +18,7 @@ export default async function starShipControl() {
           starShips.push(element);
         });
         next = response.next;
-      } 
+      }
     })
     .catch((error) => {
       console.error(error);
@@ -31,16 +33,16 @@ export default async function starShipControl() {
         if (response.status === 200) {
           return response.json();
         } else {
-            return "error";
+          return "error";
         }
       })
       .then((response) => {
         if (starShips !== "error") {
-            response.results.forEach((element) => {
-              starShips.push(element);
-            });
-            next = response.next;
-          } 
+          response.results.forEach((element) => {
+            starShips.push(element);
+          });
+          next = response.next;
+        }
       })
       .catch((error) => {
         starShips = "error";
@@ -48,6 +50,8 @@ export default async function starShipControl() {
       });
     page = page + 1;
   }
-  
+  if (backup && starShips === "error") {
+    starShips = Backup();
+  }
   return starShips;
 }

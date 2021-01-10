@@ -1,21 +1,15 @@
-import './css/Loading.css';
+import "./css/Loading.css";
 import * as React from "react";
-import Rocket from "./images/rocket.png"
+import Rocket from "./images/rocket.png";
 
 class Loading extends React.Component {
-  constructor() {
-    super();
-  }
   render() {
-
-    
-      return (
-        <React.Fragment>
-        <img class="rocket launch"  src={Rocket} />
-        </React.Fragment>
-       
-      );
-    }
+    return (
+      <React.Fragment>
+        <img class="rocket launch" alt="Rocket" src={Rocket} />
+      </React.Fragment>
+    );
+  }
 }
 
 export default Loading;
