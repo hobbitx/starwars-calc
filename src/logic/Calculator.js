@@ -17,7 +17,5 @@ export default function Calculator(distance, starShips) {
     calc = calc.filter((element) => {
         return !isNaN(element.stops);
     })
-    return calc.sort((a, b) => {
-        return a.stops - b.stops;
-    });
+    return calc;
 }

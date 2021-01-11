@@ -12,9 +12,13 @@ export default function Calc(distance, MGLT, consumables) {
     let week = parseInt(consumables.split(" ")[0]);
     hours = week * 7 * 24;
   }
+  if (consumables.includes("day")) {
+    let days = parseInt(consumables.split(" ")[0]);
+    hours = days  * 24;
+  }
   if (consumables.includes("hours")) {
     hours = parseInt(consumables.split(" ")[0]);
   }
-  let gasto = distance / MGLT;
-  return gasto / hours;
+  let  hours_spent = distance / MGLT;
+  return hours_spent / hours;
 }

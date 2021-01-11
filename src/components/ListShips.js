@@ -6,7 +6,6 @@ import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import "./css/ListShips.css";
 
 const top = {
-  position: "fixed",
   top: "0%",
   left: "0%",
   margin: "5px",
