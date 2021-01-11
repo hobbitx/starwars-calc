@@ -39,8 +39,8 @@ class ListShips extends React.Component {
         <div class="Title">Starship List </div>
         <div class="subTitle">To travel {this.props.distance} MegaLights</div>
         <List animated verticalAlign="middle" size="massive">
-          {this.props.starShips.map((starShip) => (
-            <ListItem starShip={starShip} />
+          {this.props.starShips.map((starShip,index) => (
+            <ListItem starShip={starShip} show={index}/>
           ))}
         </List>
       </React.Fragment>

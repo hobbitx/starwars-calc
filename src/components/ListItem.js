@@ -13,6 +13,8 @@ class ListItem extends React.Component {
       show: "none",
       open: false,
     };
+
+   
   }
   showInfo;
 
@@ -24,7 +26,16 @@ class ListItem extends React.Component {
 
     console.log("Show?=" + this.state.show);
   };
+  componentDidMount(){
+    if(this.props.show === 0){
+      this.setState({
+        open: true ,
+        show: "block" ,
+      });
+    }
+  }
   render() {
+   
     return (
       <List.Item
         onClick={() => {
